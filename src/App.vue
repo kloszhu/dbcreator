@@ -20,7 +20,9 @@
       </a-collapse-panel>
       <a-collapse-panel key="3" header="This is panel header 3">
       <!--菜单的拖拽按钮-->
-      <vuedraggable class="wrapper"  v-model="list">
+      <vuedraggable class="wrapper" 
+      :options="{group:{name: falgs,pull:'clone'},filter: '.undraggable', sort: false}"
+       v-model="list">
         <transition-group>
           <div v-for="item in list" :key="item.id" class="item">
             <a-button type="primary">{{item.code}}</a-button>
