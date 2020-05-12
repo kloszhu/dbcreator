@@ -2,7 +2,8 @@
 import Router from 'vue-router'
 
 const routes = [
-    { path: '/', component: () => import(/* webpackChunkName:'login'*/ './pages/layout.vue') }
+    { path: '/layout', component: () => import(/* webpackChunkName:'login'*/ './pages/layout.vue') },
+    { path: '/menu', component: () => import(/* webpackChunkName:'login'*/ './components/layoutmenu.vue') },
   ]
 
   var router =  new Router({

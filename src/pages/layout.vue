@@ -2,36 +2,7 @@
   <a-layout id="components-layout-demo-fixed-sider">
     <a-layout-sider :style="{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }"  width="300" style="background: #fff">
       <div class="logo" />
-    <div>
-    <a-collapse accordion>
-      <a-collapse-panel key="1" header="This is panel header 1">
-      <a-row>
-          <a-col :span="12"> <a-button type="primary">测试123</a-button></a-col>
-           <a-col :span="12"> <a-button type="primary">测试123</a-button></a-col>
-      </a-row>
-        <a-button type="primary">测试123</a-button>
-         <a-button type="primary">测试123</a-button>
-          <a-button type="primary" @click="test">测试OK</a-button>
-      </a-collapse-panel>
-      <a-collapse-panel key="2" header="This is panel header 2" :disabled="false">
-       <a-button type="primary">测试123</a-button>
-         <a-button type="primary">测试123</a-button>
-          <a-button type="primary">测试123</a-button>
-      </a-collapse-panel>
-      <a-collapse-panel key="3" header="This is panel header 3">
-      <!--菜单的拖拽按钮-->
-      <vuedraggable class="wrapper" 
-      :options="{group:{name: falgs,pull:'clone'},filter: '.undraggable', sort: false}"
-       v-model="list">
-        <transition-group>
-          <div v-for="item in list" :key="item.id" class="item">
-            <a-button type="primary">{{item.code}}</a-button>
-          </div>
-        </transition-group>
-      </vuedraggable>
-      </a-collapse-panel>
-    </a-collapse>
-  </div>
+
 
     </a-layout-sider>
     <a-layout :style="{ marginLeft: '200px' }">
