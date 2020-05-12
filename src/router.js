@@ -1,11 +1,8 @@
 // import Vue from 'vue'
 import Router from 'vue-router'
-import DndList from './components/DndList.vue'
-import App from './App'
 
 const routes = [
-    { path: '/dnd', component: DndList },
-    { path: '/', component: App }
+    { path: '/', component: () => import(/* webpackChunkName:'login'*/ './pages/layout.vue') }
   ]
 
   var router =  new Router({
